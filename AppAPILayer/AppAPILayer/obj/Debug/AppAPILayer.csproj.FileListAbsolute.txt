@@ -72,3 +72,6 @@ C:\Users\Tanvir Ahmed\Desktop\ADV .NET\A\AppAPILayer\AppAPILayer\bin\EntityFrame
 C:\Users\Tanvir Ahmed\Desktop\ADV .NET\A\AppAPILayer\AppAPILayer\obj\Debug\AppAPILayer.csproj.CopyComplete
 C:\Users\Tanvir Ahmed\Desktop\ADV .NET\A\AppAPILayer\AppAPILayer\obj\Debug\AppAPILayer.dll
 C:\Users\Tanvir Ahmed\Desktop\ADV .NET\A\AppAPILayer\AppAPILayer\obj\Debug\AppAPILayer.pdb
+C:\Users\Tanvir Ahmed\Desktop\ADV .NET\A\AppAPILayer\AppAPILayer\bin\System.Web.Cors.dll
+C:\Users\Tanvir Ahmed\Desktop\ADV .NET\A\AppAPILayer\AppAPILayer\bin\System.Web.Http.Cors.dll
+C:\Users\Tanvir Ahmed\Desktop\ADV .NET\A\AppAPILayer\AppAPILayer\bin\System.Web.Http.Cors.xml

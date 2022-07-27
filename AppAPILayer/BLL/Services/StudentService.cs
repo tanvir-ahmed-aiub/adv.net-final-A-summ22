@@ -1,4 +1,5 @@
 ﻿using BLL.Entities;
+using DAL;
 using DAL.EF;
 using DAL.Repo;
 using System;
@@ -13,7 +14,7 @@ namespace BLL.Services
     {
         public static List<StudentModel> Get()
         {
-            var data = StudentRepo.Get();
+            var data = DataAccessFactory.StudentDataAccess().Get();
             var students = new List<StudentModel>();
             foreach (var item in data)
             {
@@ -29,15 +30,15 @@ namespace BLL.Services
         }
         public static List<Student> GetScholarshipData()
         {
-            return StudentRepo.Get().Where(s => s.Cgpa.Equals("3.75")).ToList();//cgpa was string thats why equal oprtr used 
+            return DataAccessFactory.StudentDataAccess().Get().Where(s => s.Cgpa.Equals("3.75")).ToList();//cgpa was string thats why equal oprtr used 
         }
         public static List<Student>GetVar(int num)
         {
-            return StudentRepo.Get().Take(num).ToList();
+            return DataAccessFactory.StudentDataAccess().Get().Take(num).ToList();
         }
         public static StudentModel Get(int id)
         {
-            var item= StudentRepo.Get(id);
+            var item= DataAccessFactory.StudentDataAccess().Get(id);
             var s = new StudentModel()
             {
                 Id = item.Id,
@@ -56,7 +57,7 @@ namespace BLL.Services
             student.Name = s.Name;
             student.Dob = s.Dob;
             student.Cgpa = s.Cgpa;          
-            return StudentRepo.Create(student);
+            return DataAccessFactory.StudentDataAccess().Create(student);
         }
     }
 }

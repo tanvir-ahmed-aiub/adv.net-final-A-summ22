@@ -48,8 +48,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DataAccessFactory.cs" />
+    <Compile Include="EF\Cours.cs">
+      <DependentUpon>StudentDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Department.cs">
+      <DependentUpon>StudentDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="EF\Student.cs">
+      <DependentUpon>StudentDB.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\StudentCours.cs">
       <DependentUpon>StudentDB.tt</DependentUpon>
     </Compile>
     <Compile Include="EF\StudentDB.Context.cs">
@@ -67,8 +76,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>StudentDB.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repo\CourseRepo.cs" />
+    <Compile Include="Repo\DepartmentRepo.cs" />
     <Compile Include="Repo\StudentRepo.cs" />
+    <Compile Include="Repo\StudentRepoV2.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="EF\StudentDB.edmx">
